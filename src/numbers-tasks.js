@@ -69,7 +69,9 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  return Math.sqrt(((Math.abs(x1) + Math.abs(x2)) ** 2) + ((Math.abs(y1) + Math.abs(y2)) ** 2));
+  return Math.sqrt(
+    (Math.abs(x1) + Math.abs(x2)) ** 2 + (Math.abs(y1) + Math.abs(y2)) ** 2
+  );
 }
 
 /**
@@ -106,8 +108,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  return Math.acos((x1 * x2 + y1 * y2)
-  / (Math.sqrt(x1 ** 2 + y1 ** 2) * Math.sqrt(x2 ** 2 + y2 ** 2)));
+  return Math.acos(
+    (x1 * x2 + y1 * y2) /
+      (Math.sqrt(x1 ** 2 + y1 ** 2) * Math.sqrt(x2 ** 2 + y2 ** 2))
+  );
 }
 
 /**
@@ -177,7 +181,7 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  return pow > 0 ? Math.round(num / (10 ** pow)) * (10 ** pow) : num;
+  return pow > 0 ? Math.round(num / 10 ** pow) * 10 ** pow : num;
 }
 
 /**
